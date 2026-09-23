@@ -1,6 +1,6 @@
 # Every pull request gets its own preview URL, posted as a comment on the PR.
-# Needs a CLOUDFLARE_API_TOKEN repo secret with Workers Scripts:Edit on the "Andrew Ko"
-# account (the same kind of token capgaze-app uses). Without it the job says so and stops
+# Needs a CLOUDFLARE_API_TOKEN repo secret with Workers Scripts:Edit, scoped to one account;
+# the Worker is created on whichever account that is. Without it the job says so and stops
 # rather than failing, so a PR is never red just because previews are not configured.
 name: Preview
 
