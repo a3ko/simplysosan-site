@@ -189,3 +189,24 @@ label.check input{width:20px;height:20px;accent-color:var(--accent)}
 .links a:hover{color:var(--accent)}
 .links a.ext::after,.site-foot a.ext::after{content:" ↗";color:var(--muted);font-size:.85em}
 .card .links{padding-left:0}
+
+/* Phones: the menu folds behind a button so the first screen is the page, not the header.
+   The button is added by site.js, so without JS the menu simply stays open as before. */
+.menu-btn{display:none;font:700 15px/1 var(--body);background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:9px 14px;cursor:pointer;align-items:center;gap:8px}
+.menu-btn::before{content:"";width:16px;height:2px;background:currentColor;box-shadow:0 -5px 0 currentColor,0 5px 0 currentColor}
+.site-head.open .menu-btn::before{content:"×";width:16px;height:auto;background:none;box-shadow:none;font-size:22px;line-height:14px;text-align:center}
+.menu-btn,.lang-btn{-webkit-tap-highlight-color:transparent}
+@media (max-width:640px){
+  .menu-btn{display:inline-flex;margin-left:auto}
+  .menu-btn + .lang-btn{margin-left:0}
+  .js .site-nav{display:none}
+  .js .site-head.open .site-nav{display:flex;flex-direction:column;align-items:flex-start;gap:0;padding-bottom:8px}
+  .js .site-head.open .site-nav a{padding:10px 0;font-size:18px}
+  /* The preview notice shrinks to one line. */
+  .preview{padding-block:8px;font-size:14px}
+  .preview .wrap > span{display:none}
+  .preview b::after{font-weight:600;text-transform:none;letter-spacing:0;font-size:14px}
+  .preview b[lang="en"]::after{content:" · a proposed design, forms not connected"}
+  .preview b[lang="zh-Hant"]::after{content:" · 新設計預覽，表格尚未連接"}
+}
+label.check input{width:24px;height:24px;flex:none}
