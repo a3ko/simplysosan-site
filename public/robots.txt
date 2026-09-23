@@ -1,2 +1,12 @@
+# Search engines stay out of a preview. Link-preview crawlers are let in so a shared
+# link shows its card in WhatsApp, iMessage, Slack and Telegram; they fetch one page
+# when a link is pasted and index nothing.
+User-agent: facebookexternalhit
+User-agent: WhatsApp
+User-agent: Twitterbot
+User-agent: Slackbot-LinkExpanding
+User-agent: TelegramBot
+Allow: /
+
 User-agent: *
 Disallow: /

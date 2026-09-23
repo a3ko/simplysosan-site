@@ -1,5 +1,8 @@
-// Serves public/ and one API route. Everything except /api/* goes straight to the
-// static assets without running this code (see run_worker_first in wrangler.jsonc).
+// Serves public/ and one API route.
+//
+// Pages pass through here too, for one reason: a link-preview card needs an absolute
+// og:image URL, and every preview has its own hostname, so the page says "/og.jpg" and
+// this fills in the origin it was actually requested from.
 //
 // GET /api/episodes reads the podcast's RSS feed and returns the latest episodes as JSON,
 // so the Podcast page lists new episodes without anyone editing the site. The feed host
@@ -13,7 +16,17 @@ export default {
     const url = new URL(request.url);
     if (url.pathname === "/api/episodes") return episodes();
     if (url.pathname.startsWith("/api/")) return json({ error: "not found" }, 404);
-    return env.ASSETS.fetch(request);
+    const res = await env.ASSETS.fetch(request);
+    if (!(res.headers.get("content-type") || "").includes("text/html")) return res;
+    const abs = (v) => (v && v.startsWith("/") ? url.origin + v : v);
+    return new HTMLRewriter()
+      .on('meta[property="og:image"]', {
+        element(el) { el.setAttribute("content", abs(el.getAttribute("content"))); },
+      })
+      .on("head", {
+        element(el) { el.append(`<meta property="og:url" content="${url.origin}${url.pathname}">`, { html: true }); },
+      })
+      .transform(res);
   },
 };
 

@@ -1,6 +1,6 @@
 {
-  // public/ is served as it is. worker/index.js runs only for /api/*, which today is the
-  // podcast feed the Podcast page lists episodes from.
+  // public/ is served as it is. worker/index.js runs first on every request: /api/* is the
+  // podcast feed, and pages get an absolute og:image URL for their link-preview card.
   "name": "simplysosan-site",
   "main": "worker/index.js",
   // No account_id: the CLOUDFLARE_API_TOKEN secret is scoped to exactly one account, and
@@ -11,7 +11,7 @@
     "directory": "./public/",
     "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
-    "run_worker_first": ["/api/*"]
+    "run_worker_first": true
   },
   // Previews only, for now. simplysosan.com still belongs to the GoHighLevel site, and
   // this is a proposal Sosan has not approved, so nothing here may claim a public address:

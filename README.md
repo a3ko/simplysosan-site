@@ -28,6 +28,16 @@ To look at it locally:
 
     npx wrangler dev    # then open http://localhost:8787 (pages plus /api/episodes)
 
+## Link-preview card
+
+`public/og.jpg` is the image WhatsApp, iMessage and Slack show for a shared link, 1200x630.
+Its source is `design/og.html`, with the fonts it needs in `design/fonts/`. Re-render it with
+headless Chrome at 1200x630 whenever the headline, photo or colours change.
+
+Every page carries the Open Graph tags with `og:image` as `/og.jpg`. A card needs an absolute
+URL, and each preview has its own hostname, so `worker/index.js` fills in the origin when a page
+is served. `robots.txt` lets the link-preview crawlers in and keeps everything else out.
+
 ## Left as it is on the current site
 
 - **Membership checkout** is ThriveCart (`simplysosan.thrivecart.com/swc-membership2025/`). The preview's join
