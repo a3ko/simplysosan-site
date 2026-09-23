@@ -1,0 +1,35 @@
+<!doctype html>
+<!-- The link-preview card (WhatsApp, iMessage, Slack). Rendered to public/og.jpg at 1200x630
+     with headless Chrome; see README. Fonts are local files (the Chinese one a subset) so the render never falls back. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face{font-family:"DM Serif Display";src:url(fonts/dmserif.woff2) format("woff2")}
+@font-face{font-family:"Nunito Sans";font-weight:800;src:url(fonts/nunito800.woff2) format("woff2")}
+@font-face{font-family:"Noto Sans TC";font-weight:700;src:url(fonts/notosanstc700.woff2) format("woff2")}
+*{box-sizing:border-box;margin:0}
+html,body{width:1200px;height:630px;overflow:hidden}
+body{background:#F7F8F4;color:#1F2A24;font-family:"Nunito Sans",sans-serif;display:grid;grid-template-columns:1fr 430px}
+.copy{padding:64px 0 56px 72px;display:flex;flex-direction:column;gap:26px}
+.logo{height:82px;width:auto;align-self:flex-start}
+.eyebrow{font-weight:800;font-size:22px;letter-spacing:.08em;text-transform:uppercase;color:#3E7A2D}
+h1{font-family:"DM Serif Display",serif;font-weight:400;font-size:74px;line-height:1.05;letter-spacing:-.005em}
+.zh{font-family:"Noto Sans TC",sans-serif;font-weight:700;font-size:34px;color:#56635C;letter-spacing:.03em}
+.url{margin-top:auto;font-weight:800;font-size:24px;color:#3E7A2D;display:flex;align-items:center;gap:12px}
+.url::before{content:"";width:14px;height:14px;border-radius:50%;background:#8DBF45}
+.photo{position:relative;background:#ECF2E3}
+.photo img{position:absolute;inset:40px 40px 0 20px;width:calc(100% - 60px);height:calc(100% - 40px);object-fit:cover;object-position:50% 20%;border-radius:200px 200px 0 0}
+</style>
+</head>
+<body>
+  <div class="copy">
+    <img class="logo" src="../public/img/logo.png" alt="">
+    <div class="eyebrow">Cantonese health coaching for women 40+</div>
+    <h1>Your health after 40, made simple.</h1>
+    <div class="zh">40歲後的健康，其實可以好簡單。</div>
+    <div class="url">simplysosan.com</div>
+  </div>
+  <div class="photo"><img src="../public/img/sosan-portrait.jpg" alt=""></div>
+</body>
+</html>
