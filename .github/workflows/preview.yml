@@ -1,0 +1,61 @@
+# Every pull request gets its own preview URL, posted as a comment on the PR.
+# Needs a CLOUDFLARE_API_TOKEN repo secret with Workers Scripts:Edit on the "Andrew Ko"
+# account (the same kind of token capgaze-app uses). Without it the job says so and stops
+# rather than failing, so a PR is never red just because previews are not configured.
+name: Preview
+
+on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - '**/*.md'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for the Cloudflare token
+        id: token
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -n "$TOKEN" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"
+          else echo "::warning::No CLOUDFLARE_API_TOKEN repo secret, so no preview was uploaded."; fi
+      # `versions upload` refuses a Worker that does not exist yet. This creates it on the
+      # first run and is a no-op after; with no routes and workers_dev off it publishes
+      # nothing anyone can reach.
+      - name: Ensure the Worker exists
+        if: steps.token.outputs.ok == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          wranglerVersion: "4.131.1"
+          command: deploy
+      - name: Upload preview version
+        if: steps.token.outputs.ok == 'true'
+        id: upload
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          wranglerVersion: "4.131.1"
+          command: versions upload --preview-alias pr-${{ github.event.number }}
+      - name: Comment the preview URL
+        if: steps.token.outputs.ok == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const out = `${{ steps.upload.outputs.command-output }}`;
+            const all = out.match(/https:\/\/[^\s]*\.workers\.dev/g) || [];
+            const url = all.find((u) => u.includes(`pr-${context.issue.number}-`)) || all[0];
+            const body = url
+              ? `**Preview:** ${url}\n\nNot indexed by search engines; forms are not connected.`
+              : '**Preview uploaded, but wrangler printed no URL.**';
+            const { data: comments } = await github.rest.issues.listComments({ ...context.repo, issue_number: context.issue.number });
+            const mine = comments.find((c) => c.body.startsWith('**Preview'));
+            if (mine) await github.rest.issues.updateComment({ ...context.repo, comment_id: mine.id, body });
+            else await github.rest.issues.createComment({ ...context.repo, issue_number: context.issue.number, body });

@@ -1,0 +1,3 @@
+# A preview of a proposed site must never be indexed as if it were the real one.
+/*
+  X-Robots-Tag: noindex, nofollow
