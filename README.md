@@ -39,7 +39,13 @@ To look at it locally:
 5. Confirmation that $68 and $680 are Canadian dollars, so the pages can say so.
 6. Access to the domain's DNS when she decides to switch.
 
-## Deploying later
+## Previews
 
-Any static host works. Cloudflare Pages or a Cloudflare Worker with static assets would match how
-`capgaze-app` is run: a preview link on every pull request, and merging publishes.
+Every pull request gets its own preview URL on Cloudflare, posted as a comment by
+`.github/workflows/preview.yml`, the same as `capgaze-app`. It needs a `CLOUDFLARE_API_TOKEN` repository
+secret (Workers Scripts:Edit); without one the job warns and skips. Previews send `noindex` and
+`robots.txt` disallows everything, so search engines never list a copy of her site.
+
+There is no production deploy yet, on purpose: `wrangler.jsonc` has no routes and `workers_dev` off,
+so nothing is reachable except per-PR previews. Going live means adding simplysosan.com to `routes`
+and a deploy workflow, once Sosan has approved it.
