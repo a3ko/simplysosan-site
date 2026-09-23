@@ -19,6 +19,26 @@
     });
   });
 
+  // Phones: a Menu button folds the main menu away (the CSS only hides it when .js is set).
+  root.classList.add("js");
+  var head = document.querySelector(".site-head");
+  var nav = head && head.querySelector(".site-nav");
+  var lang = head && head.querySelector(".lang-btn");
+  if (nav && lang) {
+    nav.id = nav.id || "site-nav";
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "menu-btn";
+    btn.setAttribute("aria-controls", nav.id);
+    btn.setAttribute("aria-expanded", "false");
+    btn.innerHTML = '<span lang="en">Menu</span><span lang="zh-Hant">選單</span>';
+    btn.addEventListener("click", function () {
+      var open = head.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    lang.parentNode.insertBefore(btn, lang);
+  }
+
   // Forms are not connected in the preview. Say so instead of pretending to submit.
   document.querySelectorAll("form[data-preview]").forEach(function (form) {
     form.addEventListener("submit", function (ev) {
