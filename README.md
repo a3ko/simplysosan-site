@@ -9,16 +9,24 @@ Nothing here is live: the domain still points at the current GoHighLevel site.
       index.html       home: offer overview, why a coach, member quotes, about Sosan, newsletter signup
       programs.html    signature programs and seasonal resets, with one waitlist form for all of them
       membership.html  the Simply Wellness Club: monthly cycle, pricing, FAQ
+      podcast.html     the show, listen buttons, and the latest episodes read live from the feed
+      resources.html   free guides, recipes and archived articles
+      about.html       Sosan's story, credentials and media
+      login.html       points members to the Kajabi members' site (no password form on a preview)
+      privacy.html     her privacy policy, word for word from the current site
+      terms.html       her terms and conditions, word for word from the current site
       styles.css       every colour and font comes from the tokens at the top; light and dark themes
       site.js          English / 中文 toggle (remembered per browser) and the preview-only form message
       img/             Sosan's own photos and logo, taken from the current site and resized for the web
+    worker/index.js    runs only for /api/*: GET /api/episodes turns the podcast RSS feed into JSON
 
-Plain HTML and CSS, no build step. Every page carries both languages: English in `lang="en"` elements and
+Plain HTML and CSS, no build step. Every menu and footer link stays inside the preview; only the join
+buttons, the members' site, the podcast apps and individual recipe and article posts go to other sites. Every page carries both languages: English in `lang="en"` elements and
 Traditional Chinese in `lang="zh-Hant"`, and the toggle hides one. Add both whenever you add text.
 
 To look at it locally:
 
-    cd public && python3 -m http.server 8080    # then open http://localhost:8080
+    npx wrangler dev    # then open http://localhost:8787 (pages plus /api/episodes)
 
 ## Left as it is on the current site
 

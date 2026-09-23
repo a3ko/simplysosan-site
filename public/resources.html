@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Free resources · Simply Sosan</title>
+<meta name="description" content="Free guides, recipes and health tips for women over 40 from Sosan Hua.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="preview" role="note">
+  <div class="wrap">
+    <b lang="en">Preview</b><b lang="zh-Hant">預覽</b>
+    <span lang="en">A proposed new design for simplysosan.com. Sign-up buttons go to the current live pages, and the forms here are not connected yet.</span>
+    <span lang="zh-Hant">這是 simplysosan.com 新設計的預覽。報名按鈕會連到現有網站，此頁的表格尚未連接。</span>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Simply Sosan home"><img src="img/logo.png" alt="Simply Sosan" width="480" height="300"></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="programs.html"><span lang="en">Programs</span><span lang="zh-Hant">課程</span></a>
+      <a href="membership.html"><span lang="en">Wellness Club</span><span lang="zh-Hant">有營同學會</span></a>
+      <a href="podcast.html"><span lang="en">Podcast</span><span lang="zh-Hant">播客</span></a>
+      <a href="resources.html" aria-current="page"><span lang="en">Free resources</span><span lang="zh-Hant">免費資源</span></a>
+      <a href="about.html"><span lang="en">About Sosan</span><span lang="zh-Hant">關於 Sosan</span></a>
+      <a href="login.html"><span lang="en">Member login</span><span lang="zh-Hant">會員登入</span></a>
+    </nav>
+    <button class="lang-btn" type="button" data-lang-toggle><span lang="en">中文</span><span lang="zh-Hant">English</span></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:40px">
+    <div class="wrap" style="grid-template-columns:1fr">
+      <div class="hero-copy">
+        <div class="eyebrow"><span lang="en">Free resources</span><span lang="zh-Hant">免費資源</span></div>
+        <h1><span lang="en">Free guides, recipes and tips</span><span lang="zh-Hant">免費指南、食譜與健康貼士</span></h1>
+        <p class="lede" lang="en">Start here if you're new. Everything on this page is free.</p>
+        <p class="lede" lang="zh-Hant">初次認識 Sosan？由這裡開始，本頁所有內容均免費。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head"><h2><span lang="en">Free guides</span><span lang="zh-Hant">免費指南</span></h2></div>
+      <div class="grid-2">
+        <article class="card">
+          <span class="status"><span lang="en">New</span><span lang="zh-Hant">最新</span></span>
+          <h3><span lang="en">5 steps to support bone strength</span><span lang="zh-Hant">支持骨骼強度的 5 個步驟</span></h3>
+          <p lang="en">For osteoporosis, osteopenia or worry about bone loss: simple nutrition, movement and safety tips to protect your future mobility.</p>
+          <p lang="zh-Hant">適合有骨質疏鬆、骨質密度偏低或擔心骨質流失的你：簡單的營養、運動和安全小貼士，保護將來的活動能力。</p>
+          <div class="foot"><a class="btn btn-primary" href="#guide" data-guide="bones"><span lang="en">Send me the guide</span><span lang="zh-Hant">把指南寄給我</span></a></div>
+        </article>
+        <article class="card">
+          <h3><span lang="en">10-minute stress relief guide</span><span lang="zh-Hant">10 分鐘減壓指南</span></h3>
+          <p lang="en">A quick daily routine to ease stress, steady blood sugar and protect your heart and liver, one that fits into a coffee break.</p>
+          <p lang="zh-Hant">每日簡單的減壓習慣，幫助穩定血糖、保護心臟和肝臟，咖啡時間都做得到。</p>
+          <div class="foot"><a class="btn btn-ghost" href="#guide" data-guide="stress"><span lang="en">Send me the guide</span><span lang="zh-Hant">把指南寄給我</span></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide" class="tinted">
+    <div class="wrap split">
+      <div class="copy">
+        <h2><span lang="en">Get a free guide</span><span lang="zh-Hant">索取免費指南</span></h2>
+        <p lang="en">We'll email it to you, along with Sosan's weekly tips. Unsubscribe any time.</p>
+        <p lang="zh-Hant">我們會把指南電郵給你，並附上 Sosan 的每週健康貼士。可隨時取消訂閱。</p>
+      </div>
+      <form class="form" data-preview>
+        <label for="g-guide"><span lang="en">Guide</span><span lang="zh-Hant">指南</span>
+          <select id="g-guide" name="guide">
+            <option value="bones">5 steps to support bone strength · 骨骼強度 5 步驟</option>
+            <option value="stress">10-minute stress relief guide · 10 分鐘減壓指南</option>
+          </select>
+        </label>
+        <div class="row">
+          <label for="g-name"><span lang="en">Name</span><span lang="zh-Hant">姓名</span><input type="text" id="g-name" name="name" autocomplete="name" required></label>
+          <label for="g-email"><span lang="en">Email</span><span lang="zh-Hant">電郵</span><input type="email" id="g-email" name="email" autocomplete="email" required></label>
+        </div>
+        <button class="btn btn-primary" type="submit"><span lang="en">Send me the guide</span><span lang="zh-Hant">把指南寄給我</span></button>
+        <p class="form-msg" hidden><span lang="en">Preview only: this form isn't connected yet. On the live site it would email you the guide.</span><span lang="zh-Hant">預覽版：此表格尚未連接。正式網站會將指南電郵給你。</span></p>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid-2">
+      <div class="card">
+        <h2><span lang="en">Recipes</span><span lang="zh-Hant">食譜</span></h2>
+        <ul class="links">
+          <li><a class="ext" href="https://simplysosan.com/post/cheese-and-avocado-egg-muffin">Cheese and Avocado Egg Muffin</a></li>
+          <li><a class="ext" href="https://simplysosan.com/post/buckwheat-crepe">Buckwheat Crepe</a></li>
+          <li><a class="ext" href="https://simplysosan.com/post/easy-omega-3-rich-ball">Easy Omega-3 Rich Balls</a></li>
+          <li><a class="ext" href="https://simplysosan.com/post/coconut-carrot-cake-balls">Coconut Carrot Cake Balls</a></li>
+          <li><a class="ext" href="https://simplysosan.com/post/creamy-vegan-sesame-cheesecake">Creamy Vegan Sesame Cheesecake</a></li>
+          <li><a class="ext" href="https://simplysosan.com/post/mixed-herbs-roasted-turkey">Mixed Herbs Roasted Turkey</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2><span lang="en">From the archive</span><span lang="zh-Hant">文章存檔</span></h2>
+        <p class="meta" lang="en">Articles from Sosan's dietitian practice, 2017 to 2019.</p>
+        <p class="meta" lang="zh-Hant">Sosan 營養師執業期間的文章（2017 至 2019 年）。</p>
+        <ul class="links">
+          <li><a class="ext" href="https://simplysosan.com/post/how-to-choose-a-healthy-yogurt">How to choose a healthy yogurt</a></li>
+          <li><a class="ext" href="https://simplysosan.com/post/sugar-is-everything-you-eat-way-more-than-you-think">Sugar is everywhere: you eat more than you think</a></li>
+          <li><a class="ext" href="https://simplysosan.com/post/tips-to-increase-your-success-with-any-weight-loss-program">10 tips for success with any weight loss program</a></li>
+          <li><a class="ext" href="https://simplysosan.com/post/tips-for-beautiful-healthy-skin-in-winter">Tips for healthy skin in winter</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <a href="index.html"><span lang="en">Home</span><span lang="zh-Hant">主頁</span></a>
+      <a href="programs.html"><span lang="en">Programs</span><span lang="zh-Hant">課程</span></a>
+      <a href="membership.html"><span lang="en">Wellness Club</span><span lang="zh-Hant">有營同學會</span></a>
+      <a href="podcast.html"><span lang="en">Podcast</span><span lang="zh-Hant">播客</span></a>
+      <a href="about.html"><span lang="en">About Sosan</span><span lang="zh-Hant">關於 Sosan</span></a>
+      <a href="privacy.html"><span lang="en">Privacy policy</span><span lang="zh-Hant">私隱政策</span></a>
+      <a href="terms.html"><span lang="en">Terms and conditions</span><span lang="zh-Hant">條款及細則</span></a>
+    </nav>
+    <p lang="en">Questions? Email info@simplysosan.com</p>
+    <p lang="zh-Hant">有疑問？請電郵 info@simplysosan.com</p>
+    <p lang="en">The information on this site is for education only and is not medical advice. Talk to your doctor before changing any medication.</p>
+    <p lang="zh-Hant">本網站資訊僅供教育用途，並非醫療建議。更改任何藥物前，請先諮詢你的醫生。</p>
+    <p>© 2026 Simply Sosan</p>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+  document.querySelectorAll("[data-guide]").forEach(function (a) {
+    a.addEventListener("click", function () { document.getElementById("g-guide").value = a.getAttribute("data-guide"); });
+  });
+</script>
+</body>
+</html>

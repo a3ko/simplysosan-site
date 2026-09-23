@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Podcast · Simply Sosan</title>
+<meta name="description" content="The Simply Sosan Podcast: simple, science-based steps for women over 40, in English and Cantonese.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="preview" role="note">
+  <div class="wrap">
+    <b lang="en">Preview</b><b lang="zh-Hant">預覽</b>
+    <span lang="en">A proposed new design for simplysosan.com. Sign-up buttons go to the current live pages, and the forms here are not connected yet.</span>
+    <span lang="zh-Hant">這是 simplysosan.com 新設計的預覽。報名按鈕會連到現有網站，此頁的表格尚未連接。</span>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Simply Sosan home"><img src="img/logo.png" alt="Simply Sosan" width="480" height="300"></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="programs.html"><span lang="en">Programs</span><span lang="zh-Hant">課程</span></a>
+      <a href="membership.html"><span lang="en">Wellness Club</span><span lang="zh-Hant">有營同學會</span></a>
+      <a href="podcast.html" aria-current="page"><span lang="en">Podcast</span><span lang="zh-Hant">播客</span></a>
+      <a href="resources.html"><span lang="en">Free resources</span><span lang="zh-Hant">免費資源</span></a>
+      <a href="about.html"><span lang="en">About Sosan</span><span lang="zh-Hant">關於 Sosan</span></a>
+      <a href="login.html"><span lang="en">Member login</span><span lang="zh-Hant">會員登入</span></a>
+    </nav>
+    <button class="lang-btn" type="button" data-lang-toggle><span lang="en">中文</span><span lang="zh-Hant">English</span></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span lang="en">Simply Sosan Podcast · 投資健康</span><span lang="zh-Hant">Simply Sosan Podcast · 投資健康</span></div>
+        <h1><span lang="en">Health after 40, in 10 to 20 minutes.</span><span lang="zh-Hant">四十歲後的健康，每集十至二十分鐘。</span></h1>
+        <p class="lede" lang="en">Fatigue, mood swings and rising cholesterol or blood sugar are common after 40, and they're not your fault. Sosan shares simple, science-based steps on menopause, blood sugar, sleep and bone health, in English and Cantonese.</p>
+        <p class="lede" lang="zh-Hant">四十歲後，容易疲倦、情緒波動、膽固醇或血糖上升都好常見，但呢啲唔係你嘅錯。Sosan 以簡單又有科學根據的方法，用粵語及英語分享更年期、血糖、睡眠與骨骼健康。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://podcasts.apple.com/us/podcast/simply-sosan-podcast-%E6%8A%95%E8%B3%87%E5%81%A5%E5%BA%B7-%E7%B2%B5%E8%8B%B1%E9%9B%99%E8%AA%9E%E9%A0%BB%E9%81%93/id1843705085">Apple Podcasts</a>
+          <a class="btn btn-ghost" href="https://spotify.link/2UyZpx9SuXb">Spotify</a>
+          <a class="btn btn-ghost" href="https://www.youtube.com/@simplysosan4649/videos">YouTube</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="img/podcast-cover.jpg" alt="Simply Sosan Podcast cover: Helping Women 40+ Thrive" width="600" height="600" style="aspect-ratio:1/1;border-radius:var(--radius)">
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2><span lang="en">Latest episodes</span><span lang="zh-Hant">最新集數</span></h2>
+        <p class="lede" id="ep-count" hidden></p>
+      </div>
+      <div id="episodes" class="episodes" aria-live="polite">
+        <p class="meta" lang="en">Loading episodes…</p>
+        <p class="meta" lang="zh-Hant">正在載入集數…</p>
+      </div>
+      <p class="more" id="ep-more">
+        <a lang="en" href="https://podcasts.apple.com/us/podcast/simply-sosan-podcast-%E6%8A%95%E8%B3%87%E5%81%A5%E5%BA%B7-%E7%B2%B5%E8%8B%B1%E9%9B%99%E8%AA%9E%E9%A0%BB%E9%81%93/id1843705085">Every episode on Apple Podcasts</a>
+        <a lang="zh-Hant" href="https://podcasts.apple.com/us/podcast/simply-sosan-podcast-%E6%8A%95%E8%B3%87%E5%81%A5%E5%BA%B7-%E7%B2%B5%E8%8B%B1%E9%9B%99%E8%AA%9E%E9%A0%BB%E9%81%93/id1843705085">在 Apple Podcasts 收聽全部集數</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="tinted">
+    <div class="wrap split">
+      <div class="copy">
+        <h2><span lang="en">Want to put it into practice?</span><span lang="zh-Hant">想將所學付諸實行？</span></h2>
+        <p lang="en">The podcast explains the why. The Wellness Club is where you do it, with a monthly plan, a group that keeps you going, and a live Q&amp;A to ask Sosan about your own situation.</p>
+        <p lang="zh-Hant">播客講解背後的原因，有營同學會就是實踐的地方：每月計劃、陪你堅持的小組，以及可以就自己情況向 Sosan 提問的直播問答。</p>
+        <div class="actions"><a class="btn btn-primary" href="membership.html"><span lang="en">See the Wellness Club</span><span lang="zh-Hant">了解有營同學會</span></a></div>
+      </div>
+      <img src="img/sosan-kitchen.jpg" alt="Sosan cooking in her kitchen" width="900" height="1350" loading="lazy" class="tall">
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <a href="index.html"><span lang="en">Home</span><span lang="zh-Hant">主頁</span></a>
+      <a href="programs.html"><span lang="en">Programs</span><span lang="zh-Hant">課程</span></a>
+      <a href="membership.html"><span lang="en">Wellness Club</span><span lang="zh-Hant">有營同學會</span></a>
+      <a href="resources.html"><span lang="en">Free resources</span><span lang="zh-Hant">免費資源</span></a>
+      <a href="about.html"><span lang="en">About Sosan</span><span lang="zh-Hant">關於 Sosan</span></a>
+      <a href="privacy.html"><span lang="en">Privacy policy</span><span lang="zh-Hant">私隱政策</span></a>
+      <a href="terms.html"><span lang="en">Terms and conditions</span><span lang="zh-Hant">條款及細則</span></a>
+    </nav>
+    <p lang="en">Questions? Email info@simplysosan.com</p>
+    <p lang="zh-Hant">有疑問？請電郵 info@simplysosan.com</p>
+    <p lang="en">The information on this site is for education only and is not medical advice. Talk to your doctor before changing any medication.</p>
+    <p lang="zh-Hant">本網站資訊僅供教育用途，並非醫療建議。更改任何藥物前，請先諮詢你的醫生。</p>
+    <p>© 2026 Simply Sosan</p>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+// Episodes come from /api/episodes, which reads the podcast feed, so a new episode
+// appears here within the hour without anyone editing the page.
+(function () {
+  var box = document.getElementById("episodes");
+  var count = document.getElementById("ep-count");
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function fmt(iso, locale) {
+    if (!iso) return "";
+    var d = new Date(iso + "T12:00:00Z");
+    return d.toLocaleDateString(locale, { year: "numeric", month: locale === "en-CA" ? "short" : "long", day: "numeric", timeZone: "UTC" });
+  }
+
+  fetch("/api/episodes")
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (data) {
+      count.innerHTML =
+        '<span lang="en">' + data.total + ' episodes so far. Here are the latest ' + data.episodes.length + '.</span>' +
+        '<span lang="zh-Hant">至今共 ' + data.total + ' 集，以下是最新 ' + data.episodes.length + ' 集。</span>';
+      count.hidden = false;
+      box.innerHTML = data.episodes.map(function (e) {
+        var no = e.number != null ? '<span lang="en">Episode ' + e.number + '</span><span lang="zh-Hant">第 ' + e.number + ' 集</span> · ' : "";
+        var len = e.minutes ? ' · <span lang="en">' + e.minutes + ' min</span><span lang="zh-Hant">' + e.minutes + ' 分鐘</span>' : "";
+        return '<article class="ep">' +
+          '<p class="ep-meta">' + no + '<span lang="en">' + esc(fmt(e.date, "en-CA")) + '</span><span lang="zh-Hant">' + esc(fmt(e.date, "zh-HK")) + '</span>' + len + '</p>' +
+          '<h3><a href="' + esc(e.link) + '">' + esc(e.title) + '</a></h3>' +
+          (e.summary ? '<p>' + esc(e.summary) + '</p>' : "") +
+          (e.audio ? '<audio controls preload="none" src="' + esc(e.audio) + '"></audio>' : "") +
+          '</article>';
+      }).join("");
+    })
+    .catch(function () {
+      box.innerHTML =
+        '<p class="meta"><span lang="en">The episode list couldn\'t load just now. Every episode is on Apple Podcasts, Spotify and YouTube.</span>' +
+        '<span lang="zh-Hant">暫時未能載入集數列表。所有集數均可在 Apple Podcasts、Spotify 及 YouTube 收聽。</span></p>';
+    });
+})();
+</script>
+</body>
+</html>
