@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Brand guide · Simply Sosan</title>
+<meta name="description" content="The Simply Sosan brand: logo, colours, type, voice, photography and social images, with every file to download.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Simply Sosan brand guide">
+<meta property="og:description" content="Logo, colours, type, voice, photography and social images, with every file to download.">
+<meta property="og:image" content="/brand/social/facebook-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<style>
+/* Guide-only layout. Colours still come from the tokens in styles.css. */
+.guide-head .wrap{display:flex;align-items:center;gap:16px;padding-block:14px}
+.guide-head img{height:44px;width:auto}
+.guide-head span{font-weight:800;color:var(--muted);font-size:15px;letter-spacing:.06em;text-transform:uppercase;margin-left:auto}
+.toc{display:flex;flex-wrap:wrap;gap:8px 18px;font-weight:700;font-size:16px}
+.toc a{color:var(--ink)}
+.g-section{padding-block:64px;border-top:1px solid var(--line)}
+.g-section .section-head{margin-bottom:28px}
+.g-num{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.rules{margin:0;padding-left:22px;display:grid;gap:8px;max-width:46em}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.tile{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface);display:grid;align-content:start}
+.tile .show{display:grid;place-items:center;padding:28px;min-height:190px}
+.tile .show img{max-width:100%;max-height:150px;width:auto;height:auto}
+.tile .show.light{background:#F7F8F4}
+.tile .show.dark{background:#1F2A24}
+.tile .show.deep{background:#3E7A2D}
+.tile .info{padding:16px 18px;display:grid;gap:8px;border-top:1px solid var(--line)}
+.tile .info b{font-size:17px}
+.tile .info p{font-size:15px;color:var(--muted)}
+.dl{display:flex;flex-wrap:wrap;gap:8px}
+.dl a{font-size:14px;font-weight:800;text-decoration:none;border:1.5px solid var(--accent);color:var(--accent);border-radius:999px;padding:5px 12px}
+.dl a:hover{background:var(--tint)}
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.sw{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+.sw .chip{height:110px;display:flex;align-items:flex-end;padding:12px 14px;font-weight:800;font-size:15px}
+.sw .info{padding:14px;display:grid;gap:4px;font-size:15px}
+.sw code{font:700 15px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}
+.sw .use{color:var(--muted)}
+.pairs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.pair{border-radius:12px;padding:16px 18px;display:grid;gap:4px;border:1px solid var(--line)}
+.pair b{font-size:20px}
+.pair small{font-size:14px;font-weight:700}
+.type-row{display:grid;grid-template-columns:220px 1fr;gap:20px;padding-block:22px;border-bottom:1px solid var(--line);align-items:baseline}
+.type-row:last-child{border-bottom:0}
+.type-row .label{display:grid;gap:4px;font-size:15px;color:var(--muted)}
+.type-row .label b{color:var(--ink);font-size:16px}
+.dodont{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.dodont > div{border-radius:var(--radius);padding:22px;display:grid;gap:12px;align-content:start}
+.do{background:var(--tint)}
+.dont{background:var(--note);color:var(--note-ink)}
+.dodont h3{font-family:var(--body);font-weight:800;font-size:18px}
+.dodont ul{margin:0;padding-left:20px;display:grid;gap:8px}
+.clear{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.clear figure{margin:0;background:#F7F8F4;border:1px dashed var(--accent);padding:40px;border-radius:12px;position:relative}
+.clear figure img{height:90px;width:auto;outline:1px solid rgba(62,122,45,.35)}
+.social-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.social-grid .show{padding:0;min-height:0;background:var(--tint)}
+.social-grid .show img{max-height:260px;width:100%;object-fit:contain}
+@media (max-width:640px){
+  .type-row{grid-template-columns:1fr;gap:8px}
+  .dodont,.clear{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="site-head guide-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Simply Sosan home"><img src="/brand/logo/logo-horizontal.svg" alt="Simply Sosan" width="300" height="74"></a>
+    <span>Brand guide</span>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom:48px">
+    <div class="wrap" style="grid-template-columns:1fr">
+      <div class="hero-copy">
+        <div class="eyebrow">Simply Sosan brand guide · October 2026</div>
+        <h1>Health after 40, made simple.</h1>
+        <p class="lede">How the new site looks and sounds, so everything Simply Sosan puts out, from a podcast cover to an Instagram post, feels like it came from the same place. Every logo and image here can be downloaded.</p>
+        <nav class="toc" aria-label="Sections">
+          <a href="#logo">Logo</a><a href="#colour">Colour</a><a href="#type">Type</a><a href="#voice">Voice</a><a href="#photos">Photography</a><a href="#social">Social images</a><a href="#files">All files</a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <section class="g-section" id="logo">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="g-num">01 · Logo</span>
+        <h2>The sprout</h2>
+        <p class="lede">The mark is the sprout from Sosan's original logo, where it stood in for the "l" in "simply". It's kept in its own green and drawn as clean lines, so it stays sharp from a browser tab to a banner. A sprout is a small, steady start, which is the promise of the brand.</p>
+      </div>
+      <div class="tiles">
+        <article class="tile">
+          <div class="show light"><img src="/brand/logo/logo-horizontal.svg" alt="Horizontal logo"></div>
+          <div class="info"><b>Horizontal</b><p>The default. Website header, email signature, documents.</p>
+            <div class="dl"><a href="/brand/logo/logo-horizontal.svg" download>SVG</a><a href="/brand/logo/logo-horizontal.png" download>PNG</a></div></div>
+        </article>
+        <article class="tile">
+          <div class="show dark"><img src="/brand/logo/logo-horizontal-white.svg" alt="Horizontal logo, white"></div>
+          <div class="info"><b>Horizontal, reversed</b><p>On dark backgrounds and photos with a dark, quiet area.</p>
+            <div class="dl"><a href="/brand/logo/logo-horizontal-white.svg" download>SVG</a><a href="/brand/logo/logo-horizontal-white.png" download>PNG</a></div></div>
+        </article>
+        <article class="tile">
+          <div class="show light"><img src="/brand/logo/logo-stacked.svg" alt="Stacked logo with tagline"></div>
+          <div class="info"><b>Stacked, with tagline</b><p>Square spaces: event slides, printed handouts, a podcast intro card.</p>
+            <div class="dl"><a href="/brand/logo/logo-stacked.svg" download>SVG</a><a href="/brand/logo/logo-stacked.png" download>PNG</a></div></div>
+        </article>
+        <article class="tile">
+          <div class="show dark"><img src="/brand/logo/logo-stacked-white.svg" alt="Stacked logo, white"></div>
+          <div class="info"><b>Stacked, reversed</b><p>The stacked logo on dark backgrounds.</p>
+            <div class="dl"><a href="/brand/logo/logo-stacked-white.svg" download>SVG</a><a href="/brand/logo/logo-stacked-white.png" download>PNG</a></div></div>
+        </article>
+        <article class="tile">
+          <div class="show light"><img src="/brand/logo/sprout-green.svg" alt="Sprout, green"></div>
+          <div class="info"><b>Sprout alone</b><p>Profile pictures, favicons, stickers, and anywhere the name is already nearby.</p>
+            <div class="dl"><a href="/brand/logo/sprout-green.svg" download>SVG</a><a href="/brand/logo/sprout-green.png" download>PNG</a></div></div>
+        </article>
+        <article class="tile">
+          <div class="show deep"><img src="/brand/logo/sprout-white.svg" alt="Sprout, white"></div>
+          <div class="info"><b>Sprout, white and ink</b><p>White on the deep green or a dark photo; ink for one-colour printing.</p>
+            <div class="dl"><a href="/brand/logo/sprout-white.svg" download>White SVG</a><a href="/brand/logo/sprout-white.png" download>White PNG</a><a href="/brand/logo/sprout-ink.svg" download>Ink SVG</a><a href="/brand/logo/sprout-ink.png" download>Ink PNG</a></div></div>
+        </article>
+      </div>
+
+      <div class="clear" style="margin-top:36px">
+        <figure><img src="/brand/logo/logo-horizontal.svg" alt="Logo with its clear space marked"></figure>
+        <div class="copy" style="display:grid;gap:12px">
+          <h3>Space and size</h3>
+          <ul class="rules">
+            <li><b>Clear space:</b> leave at least half the sprout's width empty on every side of the logo.</li>
+            <li><b>Smallest size:</b> the horizontal logo no narrower than 120px on screen (3 cm in print), the sprout alone no smaller than 16px.</li>
+            <li>Use SVG wherever it's accepted. It stays sharp at any size; PNG is for apps that won't take SVG.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dodont" style="margin-top:28px">
+        <div class="do"><h3>Do</h3><ul>
+          <li>Use the files here as they are.</li>
+          <li>Put the green sprout on the light ground, the tint, or the dark ink.</li>
+          <li>Use the white version on the deep green or on a photo's dark, plain area.</li>
+        </ul></div>
+        <div class="dont"><h3>Don't</h3><ul>
+          <li>Recolour, stretch, rotate or outline the logo, or add a shadow.</li>
+          <li>Retype "Simply Sosan" in another font next to the sprout.</li>
+          <li>Put the green sprout on a busy photo or a mid-tone background where it disappears.</li>
+          <li>Use the old grey wordmark and the new logo side by side.</li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="g-section" id="colour">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="g-num">02 · Colour</span>
+        <h2>Calm, green and light</h2>
+        <p class="lede">A light, slightly green ground; dark green-black ink for reading; a deep green that does the work of buttons and links; and the bright sprout green, kept for the mark and small accents.</p>
+      </div>
+      <div class="swatches">
+        <div class="sw"><div class="chip" style="background:#F7F8F4;color:#1F2A24;border-bottom:1px solid var(--line)">Ground</div><div class="info"><code>#F7F8F4</code><span>RGB 247 248 244</span><span class="use">Page background. The default behind everything.</span></div></div>
+        <div class="sw"><div class="chip" style="background:#1F2A24;color:#fff">Ink</div><div class="info"><code>#1F2A24</code><span>RGB 31 42 36</span><span class="use">Headings and body text. Dark backgrounds.</span></div></div>
+        <div class="sw"><div class="chip" style="background:#3E7A2D;color:#fff">Deep green</div><div class="info"><code>#3E7A2D</code><span>RGB 62 122 45</span><span class="use">Buttons, links, small labels. The action colour.</span></div></div>
+        <div class="sw"><div class="chip" style="background:#96CA4F;color:#1F2A24">Sprout</div><div class="info"><code>#96CA4F</code><span>RGB 150 202 79</span><span class="use">The mark and decoration only. Never for text on light colours.</span></div></div>
+        <div class="sw"><div class="chip" style="background:#ECF2E3;color:#1F2A24">Tint</div><div class="info"><code>#ECF2E3</code><span>RGB 236 242 227</span><span class="use">Bands and panels that set one section apart.</span></div></div>
+        <div class="sw"><div class="chip" style="background:#56635C;color:#fff">Muted</div><div class="info"><code>#56635C</code><span>RGB 86 99 92</span><span class="use">Secondary text: captions, dates, the Chinese line under a headline.</span></div></div>
+        <div class="sw"><div class="chip" style="background:#FBF1DC;color:#6E4A0B">Note</div><div class="info"><code>#FBF1DC</code> / <code>#6E4A0B</code><span class="use">Notices that need attention, like "dates to be announced". Sparingly.</span></div></div>
+      </div>
+
+      <h3 style="margin:36px 0 14px">Text that's easy to read</h3>
+      <p style="max-width:46em;margin-bottom:16px">Many readers are over 40, so contrast matters. These pairs meet the accessibility standard for text (4.5:1 or better). The sprout green on the light ground scores 1.8:1, which is why it's never used for words there.</p>
+      <div class="pairs">
+        <div class="pair" style="background:#F7F8F4;color:#1F2A24"><b>Ink on ground</b><small>13.9 : 1</small></div>
+        <div class="pair" style="background:#F7F8F4;color:#3E7A2D"><b>Deep green on ground</b><small>4.9 : 1</small></div>
+        <div class="pair" style="background:#3E7A2D;color:#fff"><b>White on deep green</b><small>5.2 : 1</small></div>
+        <div class="pair" style="background:#1F2A24;color:#96CA4F"><b>Sprout on ink</b><small>7.7 : 1</small></div>
+        <div class="pair" style="background:#F7F8F4;color:#56635C"><b>Muted on ground</b><small>5.9 : 1</small></div>
+        <div class="pair" style="background:#F7F8F4;color:#96CA4F;border-style:dashed"><b>Sprout on ground</b><small style="color:#6E4A0B">1.8 : 1, not for text</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="g-section" id="type">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="g-num">03 · Type</span>
+        <h2>Three free fonts</h2>
+        <p class="lede">All three are free from Google Fonts, so Sosan, a designer or Canva can use them without a licence.</p>
+      </div>
+      <div class="type-row">
+        <div class="label"><b>DM Serif Display</b>Headlines and the logo name. One weight.</div>
+        <div><p style="font-family:'DM Serif Display',serif;font-size:clamp(34px,5vw,52px);line-height:1.1">Your health after 40, made simple.</p></div>
+      </div>
+      <div class="type-row">
+        <div class="label"><b>Nunito Sans</b>Everything else: body text, buttons, labels. Regular, bold, extra bold.</div>
+        <div style="display:grid;gap:10px"><p style="font-size:18px">Menopause, blood sugar, cholesterol and healthy aging, explained in Cantonese by a former registered dietitian.</p><p class="eyebrow">Labels in extra bold capitals, spaced out</p></div>
+      </div>
+      <div class="type-row">
+        <div class="label"><b>Noto Sans TC</b>All Chinese text, in Traditional characters. Noto Serif TC for Chinese headlines.</div>
+        <div style="display:grid;gap:8px"><p style="font-family:'Noto Serif TC',serif;font-weight:600;font-size:34px;line-height:1.3">40歲後的健康，其實可以好簡單。</p><p style="font-family:'Noto Sans TC',sans-serif;font-size:18px">由前註冊營養師，用廣東話為你講解更年期、血糖與健康老化。</p></div>
+      </div>
+      <ul class="rules" style="margin-top:22px">
+        <li>Body text at 17px or larger on screen, 11pt or larger in print. Larger is kinder to tired eyes.</li>
+        <li>Headlines in sentence case ("Free guides, recipes and tips"), not Title Case or ALL CAPS.</li>
+        <li>Capitals only for short labels set in Nunito Sans extra bold.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="g-section" id="voice">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="g-num">04 · Voice</span>
+        <h2>A knowledgeable friend, not a lecture</h2>
+        <p class="lede">Sosan writes the way she talks on the radio: warm, practical and plain. She has 20 years of training behind her, but she never makes anyone feel behind.</p>
+      </div>
+      <div class="dodont">
+        <div class="do"><h3>Sounds like Simply Sosan</h3><ul>
+          <li>"Calcium alone isn't enough to protect your bones."</li>
+          <li>"Bring what you read, or what AI told you, to the live Q&amp;A."</li>
+          <li>"A 10-day reset for blood sugar, sleep and energy."</li>
+          <li>Specific numbers and real steps: "10 minutes", "after 40", "three meals in 30 minutes".</li>
+        </ul></div>
+        <div class="dont"><h3>Doesn't</h3><ul>
+          <li>Promises results: "Lower blood sugar in 10 days", "reverse diabetes".</li>
+          <li>Tells people they won't need their medication. Always: "talk to your doctor".</li>
+          <li>Fear or guilt: "before it's too late", "you're poisoning your family".</li>
+          <li>Jargon without a plain explanation next to it.</li>
+        </ul></div>
+      </div>
+      <ul class="rules" style="margin-top:22px">
+        <li><b>Two languages, equal care.</b> English first, then Chinese, or a language switch, as on the site. Chinese in Traditional characters, written for a Cantonese reader.</li>
+        <li><b>Check that both languages say the same thing.</b> A translation must not make a stronger health claim than the English does.</li>
+        <li><b>Canadian spelling</b> in English: colour, centre, fibre, favourite.</li>
+        <li><b>Every health page carries the line:</b> "Education only, not medical advice. Talk to your doctor before changing any medication."</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="g-section" id="photos">
+    <div class="wrap split">
+      <div class="copy">
+        <span class="g-num">05 · Photography</span>
+        <h2>Real, warm and at home</h2>
+        <ul class="rules">
+          <li><b>Sosan herself,</b> in natural light, at home or in the kitchen. People join a person, so she should be in most images.</li>
+          <li><b>Real food,</b> shot from above or at the counter, colourful and simple enough to cook on a weeknight.</li>
+          <li><b>Leave room for words:</b> a plain wall, a counter or sky where a headline can sit.</li>
+          <li><b>No stock models</b> in white lab coats, and no before-and-after body photos.</li>
+          <li>Ask before posting anyone else's face, including members at events.</li>
+        </ul>
+      </div>
+      <img src="/img/sosan-kitchen.jpg" alt="Sosan cooking at her kitchen counter in natural light" class="tall" width="900" height="1350">
+    </div>
+  </section>
+
+  <section class="g-section" id="social">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="g-num">06 · Social images</span>
+        <h2>Ready to upload</h2>
+        <p class="lede">Each one is made at the exact size its platform asks for, with the words kept inside the area every phone and computer shows.</p>
+      </div>
+      <div class="tiles social-grid">
+        <article class="tile"><div class="show"><img src="/brand/social/profile.png" alt="Profile picture" style="max-height:200px;width:auto"></div><div class="info"><b>Profile picture</b><p>1080 × 1080. Every platform crops it to a circle; the sprout sits safely inside.</p><div class="dl"><a href="/brand/social/profile.png" download>Light</a><a href="/brand/social/profile-green.png" download>Green</a></div></div></article>
+        <article class="tile"><div class="show"><img src="/brand/social/facebook-cover.jpg" alt="Facebook cover"></div><div class="info"><b>Facebook cover</b><p>1640 × 624. Words are kept clear of the profile picture and the phone crop.</p><div class="dl"><a href="/brand/social/facebook-cover.jpg" download>Download</a></div></div></article>
+        <article class="tile"><div class="show"><img src="/brand/social/youtube-banner.jpg" alt="YouTube banner"></div><div class="info"><b>YouTube banner</b><p>2560 × 1440. Everything that matters sits in the middle strip every device shows.</p><div class="dl"><a href="/brand/social/youtube-banner.jpg" download>Download</a></div></div></article>
+        <article class="tile"><div class="show"><img src="/brand/social/linkedin-banner.jpg" alt="LinkedIn banner"></div><div class="info"><b>LinkedIn banner</b><p>1584 × 396. Words on the right, away from the profile photo.</p><div class="dl"><a href="/brand/social/linkedin-banner.jpg" download>Download</a></div></div></article>
+        <article class="tile"><div class="show"><img src="/brand/social/instagram-post.jpg" alt="Instagram tip post"></div><div class="info"><b>Instagram post</b><p>1080 × 1350, the tall format that fills the most of a phone screen. One tip per post, English and Chinese.</p><div class="dl"><a href="/brand/social/instagram-post.jpg" download>Download</a></div></div></article>
+        <article class="tile"><div class="show"><img src="/brand/social/instagram-story.jpg" alt="Instagram story for a new episode"></div><div class="info"><b>Instagram story</b><p>1080 × 1920. For a new episode. Nothing important in the top 250px or bottom 300px, where the app's own buttons sit.</p><div class="dl"><a href="/brand/social/instagram-story.jpg" download>Download</a></div></div></article>
+      </div>
+      <p style="margin-top:22px;max-width:46em">The post and the story are templates. Each is a small web page in the site's repository (<code>design/social/</code>). Change the words, and it's re-rendered at the right size with the right fonts, so every new post looks like the last.</p>
+    </div>
+  </section>
+
+  <section class="g-section" id="files">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="g-num">07 · All files</span>
+        <h2>Everything in one place</h2>
+      </div>
+      <ul class="rules">
+        <li><b>Logos:</b> SVG for anything that accepts it; PNG (transparent, 1,600 to 2,000px wide) for everything else.</li>
+        <li><b>Favicon and app icons:</b> already on the site at <a href="/favicon.svg">/favicon.svg</a> and <a href="/apple-touch-icon.png">/apple-touch-icon.png</a>.</li>
+        <li><b>Link preview card:</b> <a href="/og.jpg">/og.jpg</a>, the image WhatsApp and iMessage show when the site is shared.</li>
+        <li><b>Fonts:</b> <a href="https://fonts.google.com/specimen/DM+Serif+Display">DM Serif Display</a>, <a href="https://fonts.google.com/specimen/Nunito+Sans">Nunito Sans</a>, <a href="https://fonts.google.com/noto/specimen/Noto+Sans+TC">Noto Sans TC</a>.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Simply Sosan brand guide, prepared October 2026 with the proposed new site. The sprout comes from Sosan's original logo; the colours and type are the site's own.</p>
+    <p>© 2026 Simply Sosan</p>
+  </div>
+</footer>
+<script src="/site.js"></script>
+</body>
+</html>
