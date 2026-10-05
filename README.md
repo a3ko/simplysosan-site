@@ -28,6 +28,17 @@ To look at it locally:
 
     npx wrangler dev    # then open http://localhost:8787 (pages plus /api/episodes)
 
+## Brand kit
+
+`public/brand/` is the brand guide (served at `/brand/`) and every file it offers: the logo
+lockups and sprout as SVG and transparent PNG in `brand/logo/`, and ready-to-upload social images
+in `brand/social/`. The logo names are outlined shapes, so the SVGs need no fonts installed.
+
+The social images are rendered from `design/social/*.html` with headless Chrome at each
+platform's size; the fonts they use are in `design/fonts/`. The Chinese font there is a subset
+holding only the characters the templates use, so a template given new Chinese text needs that
+subset rebuilt (`pyftsubset NotoSansTC.ttf --text-file=...`) before it renders correctly.
+
 ## Favicon
 
 The sprout from her logo (the "l" in "simply"), redrawn as strokes in its own green, #96CA4F, in
