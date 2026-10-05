@@ -28,6 +28,14 @@ To look at it locally:
 
     npx wrangler dev    # then open http://localhost:8787 (pages plus /api/episodes)
 
+## Favicon
+
+The sprout from her logo (the "l" in "simply"), redrawn as strokes in its own green, #96CA4F, in
+`public/favicon.svg`. Its stroke is 24 rather than the logo's 18 so it still reads at 16px.
+`favicon.ico`, `icon-32.png`, `icon-192.png` and `icon-512.png` are rendered from it with headless
+Chrome; `apple-touch-icon.png` comes from `design/apple-touch-icon.html`, on the site's light ground
+because iOS shows transparency as black. Re-render them all if the SVG changes.
+
 ## Link-preview card
 
 `public/og.jpg` is the image WhatsApp, iMessage and Slack show for a shared link, 1200x630.
