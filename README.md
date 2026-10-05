@@ -32,9 +32,9 @@ To look at it locally:
 
 `public/brand/` is the brand guide (served at `/brand/`) and every file it offers: the logo
 lockups and sprout as SVG and transparent PNG in `brand/logo/`, plus the original "simply sosan" wordmark rebuilt with the sprout as the l (Jost 270, drawn in the original logo's own pixel space so the sprout lands where it did), and ready-to-upload social images
-in `brand/social/`. The logo names are outlined shapes, so the SVGs need no fonts installed.
+in `brand/social/`. The logo letters are outlined shapes, so the SVGs need no fonts installed.
 
-The social images are rendered from `design/social/*.html` (the `wm-` templates are the wordmark set, written to `brand/social/wordmark/`) with headless Chrome at each
+The social images are rendered from `design/social/*.html` with headless Chrome at each
 platform's size; the fonts they use are in `design/fonts/`. The Chinese font there is a subset
 holding only the characters the templates use, so a template given new Chinese text needs that
 subset rebuilt (`pyftsubset NotoSansTC.ttf --text-file=...`) before it renders correctly.

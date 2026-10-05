@@ -1,5 +1,4 @@
 /* Shared by every social template. Fonts are local so a render never falls back. */
-@font-face{font-family:"DM Serif Display";src:url(../fonts/DMSerifDisplay.ttf)}
 @font-face{font-family:"Nunito Sans";font-weight:200 1000;src:url(../fonts/NunitoSans-var.ttf)}
 @font-face{font-family:"Jost";font-weight:100 900;src:url(../fonts/Jost-var.ttf)}
 @font-face{font-family:"Noto Sans TC";font-weight:400 700;src:url(../fonts/NotoSansTC-subset.ttf)}
@@ -7,7 +6,6 @@
 *{box-sizing:border-box;margin:0}
 html,body{overflow:hidden}
 body{background:var(--ground);color:var(--ink);font-family:"Nunito Sans","Noto Sans TC",sans-serif}
-.serif{font-family:"DM Serif Display","Noto Sans TC",serif;font-weight:400}
 .zh{font-family:"Noto Sans TC",sans-serif;font-weight:700;letter-spacing:.03em}
 .eyebrow{font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--deep)}
 img{display:block}
