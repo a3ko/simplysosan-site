@@ -31,7 +31,7 @@ To look at it locally:
 ## Brand kit
 
 `public/brand/` is the brand guide (served at `/brand/`) and every file it offers: the logo
-lockups and sprout as SVG and transparent PNG in `brand/logo/`, and ready-to-upload social images
+lockups and sprout as SVG and transparent PNG in `brand/logo/`, plus the original "simply sosan" wordmark rebuilt with the sprout as the l (Jost 270, drawn in the original logo's own pixel space so the sprout lands where it did), and ready-to-upload social images
 in `brand/social/`. The logo names are outlined shapes, so the SVGs need no fonts installed.
 
 The social images are rendered from `design/social/*.html` with headless Chrome at each
