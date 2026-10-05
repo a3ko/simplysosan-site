@@ -31,6 +31,7 @@
     btn.className = "menu-btn";
     btn.setAttribute("aria-controls", nav.id);
     btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-label", "Menu");
     btn.innerHTML = '<span lang="en">Menu</span><span lang="zh-Hant">選單</span>';
     btn.addEventListener("click", function () {
       var open = head.classList.toggle("open");
